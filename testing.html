@@ -1,0 +1,101 @@
+<html>
+<head>
+<title>Server Testing</title>
+</head>
+
+<body>
+<h2>User Operations</h2>
+<table>
+  <tr><form action="newUser.php" method="get">
+    <td>New User (newUser.php)</td>
+    <td><input type="submit" value="Go"></td>
+    <td>username: <input type="text" name="username"></td>
+    <td>password: <input type="text" name="password"></td>
+  </form></tr>
+  <tr><form action="login.php" method="get">
+    <td>Login (login.php)</td>
+    <td><input type="submit" value="Go"></td>
+    <td>username: <input type="text" name="username"></td>
+    <td>password: <input type="text" name="password"></td>
+  </form></tr></table>
+  <tr><form action="getRefreshTime.php" method="get">
+    <td>Get Refresh Time (getRefreshTime.php)</td>
+    <td><input type="submit" value="Go"></td>
+    <td>token: <input type="text" name="token"></td>
+  </form></tr></table>
+  <tr><form action="setRefreshTime.php" method="get">
+    <td>Set Refresh Time (setRefreshTime.php)</td>
+    <td><input type="submit" value="Go"></td>
+    <td>token: <input type="text" name="token"></td>
+    <td>refresh_time: <input type="text" name="refresh_time"></td>
+  </form></tr></table>
+
+<h2>Session Operations</h2>
+<table>
+  <tr><form action="newSession.php" method="get">
+    <td>New Session (newSession.php)</td>
+    <td><input type="submit" value="Go"></td>
+    <td>token: <input type="text" name="token"></td>
+    <td>session_name: <input type="text" name="session_name"></td>
+    <td>passcode (blank for none): <input type="text" name="passcode"></td>
+    <td>latitude (float, blank for none): <input type="text" name="latitude"></td>
+    <td>longitude (float, blank for none): <input type="text" name="longitude"></td>
+    <td>radius (int, blank for none): <input type="text" name="radius"></td>
+  </form></tr>
+  
+  <tr><form action="getSessions.php" method="get">
+    <td>Get Sessions (getSessions.php)</td>
+    <td><input type="submit" value="Go"></td>
+    <td>token: <input type="text" name="token"></td>
+    <td>saved ("yes", "no", or blank) <input type="text" name="saved" value="yes"></td>
+  </form></tr>
+  
+  <tr><form action="getSessionNotes.php" method="get">
+    <td>Get Session Notes (getSessionNotes.php)</td>
+    <td><input type="submit" value="Go"></td>
+    <td>token: <input type="text" name="token"></td>
+    <td>session_id: <input type="text" name="session_id"></td>
+  </form></tr>
+
+  <tr><form action="joinSession.php" method="get">
+    <td>Join Session (joinSession.php)</td>
+    <td><input type="submit" value="Go"></td>
+    <td>token: <input type="text" name="token"></td>
+    <td>session_id: <input type="text" name="session_id"></td>
+    <td>passcode (leave blank if none): <input type="text" name="passcode"></td>
+  </form></tr>   
+  <tr><form action="leaveSession.php" method="get">
+    <td>Leave Session (leaveSession.php)</td>
+    <td><input type="submit" value="Go"></td>
+    <td>token: <input type="text" name="token"></td>
+    <td>session_id: <input type="text" name="session_id"></td>
+  </form></tr> 
+</table>
+
+<h2>Note Operations</h2>
+<table>
+  <tr><form action="newNote.php" method="get">
+    <td>New Note (newNote.php)</td>
+    <td><input type="submit" value="Go"></td>
+    <td>token: <input type="text" name="token"></td>
+    <td>note_name: <input type="text" name="note_name"></td>
+    <td>session_id (Optional): <input type="text" name="session_id"></td>
+  </form></tr>
+  
+  <tr><form action="getNote.php" method="get">
+    <td>Get Note (getNote.php)</td>
+    <td><input type="submit" value="Go"></td>
+    <td>note_id: <input type="text" name="note_id"></td>
+  </form></tr>
+</table>
+
+<h2>Other Operations</h2>
+<table>
+  <tr><form action="flush.php" method="get">
+    <td>Flush (flush.php)</td>
+    <td><input type="submit" value="Go"></td>
+  </form></tr>
+</table>
+
+</body>
+</html>

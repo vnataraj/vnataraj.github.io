@@ -1,0 +1,68 @@
+/* Makeshift CSS Reset */
+{
+	margin: 0;
+	padding: 0;
+}
+/* Tell the browser to render HTML 5 elements as block */
+header, footer, aside, nav, article {
+	display: block;
+}
+body {
+	margin: 0 auto;
+	width: 940px;
+	font: 13px/22px Helvetica, Arial, sans-serif;
+	background: #f0f0f0;
+}
+header a:hover{
+	color: #000;
+	text-decoration :none;
+}
+header a{
+	color: #777;
+	text-decoration : none;
+}
+#intro{
+	padding-top:33px;
+}
+h2 {
+	font-size: 28px;
+	line-height: 44px;
+	padding: 22px 0;
+}
+h3 {
+	font-size: 18px;
+	line-height: 22px;
+	padding: 11px 0;
+}
+#menubar {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	background: url("nav_background");
+}
+#menubar ul {
+	margin: 0 auto;
+	width: 940px;
+	list-style: none;
+}
+#menubar ul li {
+	float: left;
+}
+	#menubar ul li a {
+		display: block;
+		margin-right: 20px;
+		width: 140px;
+		font-size: 14px;
+		line-height: 44px;
+		text-align: left;
+		text-decoration: none;
+		color: #777;
+	}
+		#menubar ul li a:hover {
+			color: #000;
+		}
+		#menubar ul li.selected a {
+			color: #fff;
+		}
+
+
