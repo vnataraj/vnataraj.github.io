@@ -500,8 +500,28 @@ Ghost.prototype.randomMove = function() {
 Ghost.prototype.initPosition = function(initCount) {
 	if(initCount == 7){
 		return;
+    this.isInitiated=true;
 	} else{
-	this.randomMove();
+  var currGrid = maze[getRowIndex(this.y)][getColIndex(this.x)];
+	if(currGrid.gridType === LEFT_TOP_RIGHT){
+			this.dir = DOWN;
+			this.moveOneStep();
+	}
+	else if(currGrid.gridType === TOP_RIGHT_BOTTOM){
+				this.dir = LEFT;
+				this.moveOneStep();
+		}
+		else if(currGrid.gridType === RIGHT_BOTTOM_LEFT){
+				this.dir = UP;
+				this.moveOneStep();
+			}
+			else if(currGrid.gridType === BOTTOM_LEFT_TOP){
+				this.dir = RIGHT;
+				this.moveOneStep();
+			}
+      else{
+	        this.randomMove();
+      }
 	initCount++;
 	this.initPosition(initCount);
 	}
