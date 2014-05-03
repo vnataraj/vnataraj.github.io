@@ -1,51 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="shortcut icon" href="http://www.cs.purdue.edu/favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A layout example with a side menu that hides on mobile, just like the Pure website.">
 
-    <title>Projects- My Homepage</title>
+    <title>Vipul Nataraj &ndash; Projects</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="bootstrap-3.0.0/dist/css/bootstrap.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="starter-template.css" rel="stylesheet">
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="../../assets/js/html5shiv.js"></script>
-      <script src="../../assets/js/respond.min.js"></script>
+
+
+
+
+
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.4.2/pure.css">
+
+
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="css/layouts/side-menu-old-ie.css">
     <![endif]-->
-  </head>
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="css/layouts/side-menu.css">
+    <!--<![endif]-->
+
+
+
+
+
+
+
+
+
+
+
+</head>
 
   <body>
+  <div id="layout">
+  <a href="#menu" id="menuLink" class="menu-link">
+      <!-- Hamburger icon -->
+      <span></span>
+  </a>
 
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="index.html">Vipul Nataraj</a>
-        </div>
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-              <li class="active"><a href="projects.html">Projects</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="contact.html">Contact</a></li>
+  <div id="menu">
+      <div class="pure-menu pure-menu-open">
+          <a class="pure-menu-heading" href="#">vnataraj</a>
+
+          <ul>
+              <li class="menu-item-divided"><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="#">Contact</a></li>
           </ul>
-        </div><!--/.nav-collapse -->
       </div>
-    </div>
-
-    <div class="container">
-		<div class="starter-template">
+  </div>
+  <div class="content">
 		<div class="nolfi">
 			<p class="lead"> <br>NOLFI</br>
 			<li> An autonomous fish that is able to navigate using IR sensors, an accelerometer, and a gyroscope</li>
@@ -61,7 +71,7 @@
 		</p>
 		</div>
 		<div class="groupnote">
-			<p class="lead"> <br> GroupNote</br> 
+			<p class="lead"> <br> GroupNote</br>
 			<li> Android 4.x</li>
 			<li> Group collaborative note-taking software with syncing across a database</li>
 			<li> Group project completed using SCRUM</li>
@@ -78,13 +88,10 @@
 		</div>
 	</div>
 
-    </div><!-- /.container -->
+</div><!-- /.container -->
+</div>
 
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="bootstrap-3.0.0/assets/js/jquery.js"></script>
-    <script src="bootstrap-3.0.0/dist/js/bootstrap.min.js"></script>
+    <script src="js/ui.js"></script>
   </body>
 </html>
