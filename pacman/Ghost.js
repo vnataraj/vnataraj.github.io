@@ -450,19 +450,19 @@ Ghost.prototype.getTestDistance = function(dir, targetPacman) {
 	else{
 		switch(mrPacman.dir){
 			case LEFT:
-			toReturn = Math.sqrt(Math.pow( (this.x - (mrPacman.x - 4*GRID_WIDTH))  ,2)+Math.pow( this.y -mrPacman.y,2));
+			toReturn = Math.sqrt(Math.pow( (this.x - (mrPacman.x - 3*GRID_WIDTH))  ,2)+Math.pow( this.y -mrPacman.y,2));
 			break;
 
 			case RIGHT:
-			toReturn = Math.sqrt(Math.pow( (this.x - (mrPacman.x + 4*GRID_WIDTH))  ,2)+Math.pow( this.y -mrPacman.y,2));
+			toReturn = Math.sqrt(Math.pow( (this.x - (mrPacman.x + 3*GRID_WIDTH))  ,2)+Math.pow( this.y -mrPacman.y,2));
 			break;
 
 			case UP:
-			toReturn = Math.sqrt(Math.pow( (this.x - mrPacman.x)  ,2)+Math.pow( this.y - (mrPacman.y - 4*GRID_HEIGHT),2));
+			toReturn = Math.sqrt(Math.pow( (this.x - mrPacman.x)  ,2)+Math.pow( this.y - (mrPacman.y - 3*GRID_HEIGHT),2));
 			break;
 
 			case DOWN:
-			toReturn = Math.sqrt(Math.pow( (this.x - mrPacman.x)  ,2)+Math.pow( this.y - (mrPacman.y  + 4*GRID_HEIGHT),2));
+			toReturn = Math.sqrt(Math.pow( (this.x - mrPacman.x)  ,2)+Math.pow( this.y - (mrPacman.y  + 3*GRID_HEIGHT),2));
 			break;
 
 			default:
