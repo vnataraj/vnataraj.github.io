@@ -335,11 +335,6 @@ Ghost.prototype.move = function() {
 				this.dir = RIGHT;
 				this.moveOneStep();
 			}
-			else{
-				if(!this.isInitiated){
-					var initCount=0;
-					this.initPosition(initCount);
-				}
 				else{
 				switch(this.color){
 					case RED:
@@ -348,7 +343,7 @@ Ghost.prototype.move = function() {
 					break;
 
 					case CYAN:
-					this.blinkyMove();
+					this.inkyMove();
 					break;
 
 					case ORANGE:
@@ -361,7 +356,6 @@ Ghost.prototype.move = function() {
 					this.pinkyMove();
 					break;
 				}
-			}
 			}
 		}
 	}
@@ -499,8 +493,8 @@ Ghost.prototype.randomMove = function() {
 
 Ghost.prototype.initPosition = function(initCount) {
 	if(initCount == 7){
-		return;
     this.isInitiated=true;
+    return;
 	} else{
   var currGrid = maze[getRowIndex(this.y)][getColIndex(this.x)];
 	if(currGrid.gridType === LEFT_TOP_RIGHT){
