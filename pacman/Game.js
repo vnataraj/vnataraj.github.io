@@ -949,6 +949,7 @@ function run(isGodMode) {
 initFields();
 initCanvas(CANVAS_WIDTH, CANVAS_HEIGHT);
 canvas.addEventListener('keydown', onKeyDown, false);
+canvas.addEventListener('keyup', onKeyUp, false);
 canvas.setAttribute('tabindex','0');
 canvas.focus();
 welcomeScreen();
