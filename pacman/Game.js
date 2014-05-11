@@ -520,7 +520,7 @@ function printInstruction () {
 	ctx.font="12px monospace";
 	ctx.textAlign = "left";
 
-	var txt = "WELCOME TO \nPACMAN 15-237!\n\n\nArrow keys or\nWASD to move\n\n ESC to pause/resume\nR to restart";
+	var txt = "WELCOME TO \nPACMAN 15-237!\n\n\nArrow keys or\nWASD to move\n\nESC to pause\nor resume\nR to restart";
 	var x = 12;
 	var y = CANVAS_HEIGHT-200;
 	var lineheight = 15;
