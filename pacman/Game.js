@@ -796,6 +796,19 @@ function countDown () {
 
 /*==================Game Control Methods===================*/
 //listen to keyDown event
+
+function onKeyUp(event){
+  var escCode=27;
+  var keycod = event.keyCode;
+
+  if(keycod === escCode && !gamePaused){
+    clearInterval(intervalId);
+    gamePaused = true;
+    return;
+  }
+}
+
+//
 function onKeyDown (event) {
 	var keycode = event.keyCode;
 	var pauseCode = 81; //q to pause
@@ -840,7 +853,7 @@ function onKeyDown (event) {
 	else{
 
 		//pause game
-		if(keycode === (pauseCode || escCode) && !gamePaused){
+		if(keycode === pauseCode && !gamePaused){
 			clearInterval(intervalId);
 			gamePaused = true;
 			return;
