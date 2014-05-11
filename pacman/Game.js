@@ -520,7 +520,7 @@ function printInstruction () {
 	ctx.font="12px monospace";
 	ctx.textAlign = "left";
 
-	var txt = "WELCOME TO \nPACMAN 15-237!\n\n\nArrow keys or\nWASD to move\n\nQ to pause\nE to resume\nR to restart";
+	var txt = "WELCOME TO \nPACMAN 15-237!\n\n\nArrow keys or\nWASD to move\n\nQ or ESC to pause\nE to resume\nR to restart";
 	var x = 12;
 	var y = CANVAS_HEIGHT-200;
 	var lineheight = 15;
@@ -814,6 +814,8 @@ function onKeyDown (event) {
 	var rightCode = 39;
 	var downCode = 40;
 
+  var escCode = 27;
+
 	//start game
 	if(!gameOn){
 		if(keycode === sCode){
@@ -838,7 +840,7 @@ function onKeyDown (event) {
 	else{
 
 		//pause game
-		if(keycode === pauseCode && !gamePaused){
+		if(keycode === (pauseCode || escCode) && !gamePaused){
 			clearInterval(intervalId);
 			gamePaused = true;
 			return;
