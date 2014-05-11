@@ -816,8 +816,6 @@ function onKeyUp(event){
 //
 function onKeyDown (event) {
 	var keycode = event.keyCode;
-	var pauseCode = 81; //q to pause
-	var continueCode = 69; //e to resume
 	var restartCode = 82; //r to restart
 	var godModeCode = 71; //g to enter god mode
 
@@ -858,20 +856,6 @@ function onKeyDown (event) {
 	else{
 
 		//pause game
-		if(keycode === pauseCode && !gamePaused){
-			clearInterval(intervalId);
-			gamePaused = true;
-			return;
-		}
-
-		//resume game
-		if(keycode === continueCode && gamePaused){
-			intervalId = setInterval(updateCanvas, timerDelay);
-			gamePaused = false;
-			return;
-		}
-
-		//restart game
 		if( keycode === restartCode && restartTimer > 0) {
 			//can't restart game if a game was just refreshed.
 			restartTimer = 0;
