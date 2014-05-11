@@ -806,6 +806,11 @@ function onKeyUp(event){
     gamePaused = true;
     return;
   }
+  else if(keycod == escCode && gamePaused){
+    intervalId = setInterval(updateCanvas, timerDelay);
+		gamePaused = false;
+		return;
+  }
 }
 
 //
