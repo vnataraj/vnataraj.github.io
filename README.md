@@ -1,3 +1,8 @@
 vnataraj.github.io
 ==================
-personal page for vnataraj
+personal website of Vipul Nataraj
+
+Some projects that will hopefully be finished:
+- Pacman (Javascript)
+- Galaga (Ruby)
+- The site(HTML)
