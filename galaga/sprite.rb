@@ -1,5 +1,3 @@
 class Sprite
-  def stufftodo
-#fillin
-  end
+   #stuff
 end

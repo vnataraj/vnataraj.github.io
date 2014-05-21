@@ -8,17 +8,17 @@ class LevelStart
   def initFighters
     bees = Array.new
     20.times do
-      bee = Bee
+      bee = Bee.new
       bees.push bee
     end
     butters = Array.new
     20.times do
-      butter = Butterfly
+      butter = Butterfly.new
       butters.push butter
     end
     bats = Array.new
     4.times do
-      bat = Bat
+      bat = Bat.new
       bats.push bat
     end
     row=0
@@ -45,7 +45,7 @@ class LevelStart
     doIntro(value)
   end
   def initPlayer
-    @player=Ship
+    @player=Ship.new
     player.initialize
   end
   def levelPrompt=(value)
@@ -66,6 +66,15 @@ class LevelStart
 end
 
 class LoopThread
+  def init=(value)
+    @game = LevelStart.new
+    @thr = Thread.new {
+      @game.init(value)
+      while @game.isBeat==false do
+        puts 'play the real level!'
+      end
+    }
+  end
 
 end
 BEGIN{
