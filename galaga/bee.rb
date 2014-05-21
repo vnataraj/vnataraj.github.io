@@ -12,7 +12,7 @@ class Bee
     return @y
   end
 
-  def isfiring
+  def firing
     sleep(1.0/2.0)
     #do fire stuff and move the bee
   end
