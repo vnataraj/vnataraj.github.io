@@ -4,6 +4,12 @@
 
 {% include main.html %}
 
-{{ content }}
+<div class="content">
+  {% for post in site.posts %}
+    <li>
+    <a href="{{ post.url }}">{{ post.title }}</a>
+  {{ post.excerpt }}
+  </li>
+  {% endfor %}
 
 {% include footer.html %}
