@@ -1,0 +1,19 @@
+---
+layout: default
+title: Blog - Vipul Nataraj
+---
+
+<div class="content">
+
+{% for post in site.posts %}
+    <p>
+    <li>
+          {{ post.date }} - {{ post.title }}
+          {{ post.excerpt }}
+          <a class="pure-button" href="{{ post.url }}">...</a>
+    </li>
+    </p>
+{% endfor %}
+
+</div>
+

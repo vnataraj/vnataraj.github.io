@@ -2,7 +2,7 @@
 layout: post
 title: First Post along with some administrative things
 permalink: first.html
-published: false
+published: true
 category: misc
 tags: misc blog
 date: 2014-06-19
