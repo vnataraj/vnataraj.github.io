@@ -1,6 +1,6 @@
 ---
 layout: post
-title: First Post along with some administrative things
+title: First post along with some administrative details
 permalink: first.html
 published: true
 category: misc

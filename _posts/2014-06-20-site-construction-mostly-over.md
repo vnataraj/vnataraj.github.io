@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Finally Finished with construction!
+title: Finally finished with website construction!
 published: true
 categories: [admin, misc]
 tags: admin misc blog
