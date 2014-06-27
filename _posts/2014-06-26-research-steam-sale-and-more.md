@@ -1,6 +1,6 @@
 ---
-layout:blog
-title: Research, Steam sale and more!
+layout: post
+title: Research, Project ideas and more!
 ---
 
 Hi guys,
