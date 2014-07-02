@@ -6,9 +6,11 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <link rel="icon" href="../../favicon.ico">
-  <title>Grid Template for Bootstrap</title>
+  <title>Munchkin stuff</title>
   <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="grid.css" rel="stylesheet">
+  <script src="./content.js"></script>
+  <script src="./counter.js"></script>
   <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
   <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
   <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
@@ -20,7 +22,19 @@
 <body>
 <!---gui stuff-->
 <div class="grid">
-
+<script lang="javascript>
+echo '<select name="playernum">';
+echo '<option value="1">1</option>';
+echo '<option value="2">2</option>';
+echo '<option value="3">3</option>';
+echo '<option value="4">4</option>';
+echo '<option value="5">5</option>';
+echo '<option value="6">6</option>';
+echo '<option value="7">7</option>';
+echo '<option value="8">8</option>';
+echo '</select>';
+<button class="pure-button pure-button-primary" onClick=number_of_slots(this.document.playernum.value)>Submit</button>
+</script>
 </div>
 
 </body>
