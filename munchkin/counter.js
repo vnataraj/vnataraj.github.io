@@ -1,4 +1,4 @@
-function modify_lvl(val) {
+function modify_lvl(val, playernum) {
       var lvl = document.getElementById('lvl').value;
           var new_lvl = parseInt(lvl,10) + val;
               
