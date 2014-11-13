@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Updates and How I learned to stop worrying and love the Futex abstraction
-published: false
+published: true
 categories: [misc, parallelism]
 tags: misc parallelism
 date: 2014-10-22
