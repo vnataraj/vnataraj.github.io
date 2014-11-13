@@ -1,0 +1,33 @@
+<html>
+<head>
+  <title> My daily schedule as an NFA </title>
+  <script>
+function checkFileAPI() {
+  if (window.File && window.FileReader && window.FileList && window.Blob) {
+    reader = new FileReader();
+    return true; 
+  } else {
+    alert('The File APIs are not fully supported by your browser. Fallback required.');
+    return false;
+  }
+}
+  </script>
+</head>
+<body>
+  <!--- NFA of my daily schedule -->
+  <script>
+var engine = {
+  init:  function(system){ console.log("starting",system) },
+  redraw:function(){ console.log("redraw") }
+}
+var arbor = arbor.ParticleSystem();
+arbor.renderer = engine;
+start = arbor.addNode("Sleep");
+clas = arbor.addNode("Class");
+research = arbor.addNode("Research");
+arbor.addEdge();
+  </script>
+  <script src="../js/jquery-1.11.1.min.js"></script>
+  <script src="../js/arbor.js"></script>
+</body>
+</html>
