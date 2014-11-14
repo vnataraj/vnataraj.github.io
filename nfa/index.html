@@ -12,13 +12,30 @@ function checkFileAPI() {
   }
 }
   </script>
+  <link rel="stylesheet" type="text/css" href="style/site.css">
 </head>
 <body>
   <!--- NFA of my daily schedule -->
+  <div id="navbar">
+  <ul>
+    <li><a href="index.html">[Home]</a></li>
+    <li><a href="serviceappointment.html">[Service appointment]</a></li>
+    <li><a href="pools&amp;spas.html">[Pools]</a></li>
+    <li><a href="testimonials.html">[Testimonials]</a></li>
+    <li><a href="aboutus.html">[About us]</a></li>
+    <li><a href="contactus.html" class="active">[Contact us]</a></li>
+    <li><a href="links.html">[Links]</a></li>
+
+
+  </ul>
+  </div>
+  <div id="main">
+    <p> Hello, World! </p>
+  </div>
   <script>
-var engine = {
-  init:  function(system){ console.log("starting",system) },
-  redraw:function(){ console.log("redraw") }
+/*var engine = {
+init:  function(system){ console.log("starting",system) },
+redraw:function(){ console.log("redraw") }
 }
 var arbor = arbor.ParticleSystem();
 arbor.renderer = engine;
@@ -26,6 +43,7 @@ start = arbor.addNode("Sleep");
 clas = arbor.addNode("Class");
 research = arbor.addNode("Research");
 arbor.addEdge();
+ */
   </script>
   <script src="../js/jquery-1.11.1.min.js"></script>
   <script src="../js/arbor.js"></script>
