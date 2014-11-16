@@ -1,11 +1,11 @@
 body {
     color: #777;
-    font-family: courier;
+    font-family:monospace;
 }
 
 a {
   color: #000;
-  font-family:courier;
+  font-family:monospace;
 }
 .pure-img-responsive {
     max-width: 100%;
