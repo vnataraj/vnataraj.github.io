@@ -3,6 +3,10 @@ body {
     font-family: courier;
 }
 
+a {
+  color: #000;
+  font-family:courier;
+}
 .pure-img-responsive {
     max-width: 100%;
     height: auto;
