@@ -1,8 +1,19 @@
 ---
 layout: default
-title: Main Page - Vipul Nataraj
+title: Blog - Vipul Nataraj
 ---
-        <div class="content">
-        <h1> Home </h1>
-                <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/vipulnataraj" data-widget-id="480197246734987268" style="text-align:center">Thoughts from @vipulnataraj</a>
+
+<div class="content">
+<h1> Home </h1>
+{% for post in site.posts %}
+<div class="content">
+<h2 id="common-layouts" class="content-subhead"> {{ post.title }} </h2>
+    <p>
+          {{ post.excerpt }}
+          <a href="{{ post.url }}">...</a>
+    </p>
     </div>
+{% endfor %}
+
+</div>
+
