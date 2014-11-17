@@ -1,3 +1,7 @@
+//This is not my original code.  The original implementation is turndownforwhat.js
+// Changes to tdfw.js include changing the video, the turndown time, and the number of animations before reset.  
+// Credit to Nick Yahnke (nthitz@github) for writing tdfw.js
+
 (function() {
     var lastTime = 0;
     var vendors = ['ms', 'moz', 'webkit', 'o'];
@@ -24,8 +28,8 @@
 }());
 (function() {
 	var player;
-	var turndownAt = 20
-	var numTurntAnimations = 10
+	var turndownAt = 30
+	var numTurntAnimations = 12
 	var turntDown = false;
 	var maxNodes = 1000;
 	var animationCSS = {
