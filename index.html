@@ -7,11 +7,10 @@ title: Main Page - Vipul Nataraj
 <h1> Home </h1>
 {% for post in site.posts %}
 <div class="content">
-<h2 id="common-layouts" class="content-subhead"> {{ post.title }} </h2>
-    <p>
+  <h2 id="common-layouts" class="content-subhead"> <a href="{{ post.url }}">{{ post.title }} </a> </h2>
+    <div>
           {{ post.excerpt }}
-          <a href="{{ post.url }}">...</a>
-    </p>
+    </div>
     </div>
 {% endfor %}
 
