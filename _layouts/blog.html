@@ -7,8 +7,8 @@
 <div class="content">
   {% for post in site.posts %}
     <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-      {{ post.excerpt }}
+    <span style="color:green">$</span><a href="{{ post.url }}">{{ post.title }}</a>
+    <span style="color:maroon">{{ post.excerpt }}</span>
     </li>
   {% endfor %}
 
