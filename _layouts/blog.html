@@ -1,15 +1,13 @@
 {% include header.html %}
 
-{% include menu.html %}
-
 {% include main.html %}
 
 <div class="content">
   {% for post in site.posts %}
-    <li>
+    <div>
     <span style="color:green">$</span><a href="{{ post.url }}">{{ post.title }}</a>
     <span style="color:maroon">{{ post.excerpt }}</span>
-    </li>
+    </div>
   {% endfor %}
 
 {% include footer.html %}
