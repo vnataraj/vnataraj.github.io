@@ -17,8 +17,8 @@
     var client_id = 'd5370ef9';
     var client_secret = 'e3ae08bfd6456b6d108d54c3d3121ae2';
     function sendToSlice(){
-      var url='http://api.slice.com/oauth/authorize?client_id='+client_id+'&response_type=code&redirect_uri='+window.location.href;
-      window.location=encodeURI(url);
+      var url='http://api.slice.com/oauth/authorize?redirect_uri='+encodeURIComponent(window.location.href)+'&response_type=code&client_id='+client_id;
+      window.location=url;
     }
   </script>
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
