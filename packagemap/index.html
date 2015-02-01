@@ -1,0 +1,26 @@
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title> Package Map : An experiment in using the Slice API </title>
+    </head>
+  
+  <body>
+
+  <p> hello world! hopefully some selectors go here </p>
+
+  <form action="javascript:sendToSlice()" accept-charset=UTF-8>
+  <input type="submit">
+</form>
+  </body>
+  <script>
+    var client_id = 'd5370ef9';
+    var client_secret = 'e3ae08bfd6456b6d108d54c3d3121ae2';
+    function sendToSlice(){
+      var url='http://api.slice.com/oauth/authorize?client_id='+client_id+'&responsetype=code&redirect_uri='+window.location.href;
+      window.location=url;
+    }
+  </script>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+</html>
