@@ -17,7 +17,7 @@
     var client_id = 'd5370ef9';
     var client_secret = 'e3ae08bfd6456b6d108d54c3d3121ae2';
     function sendToSlice(){
-      var url='http://api.slice.com/oauth/authorize?redirect_uri='+encodeURIComponent(window.location.href)+'&response_type=code&client_id='+client_id;
+      var url='http://api.slice.com/oauth/authorize?redirect_uri='+encodeURIComponent(window.location.href)+'&response_type=code&client_id='+client_id+'&approval_type=force';
       window.location=url;
     }
   </script>
