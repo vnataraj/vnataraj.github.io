@@ -36,6 +36,7 @@
 $(window).load(function(){
      var auth_code = getUrlVars()["code"];
      console.log("code is"+auth_code);
+     if(auth_code){
      $.ajax({
           url: 'https://api.slice.com/oauth/token',
           type: 'POST',
@@ -55,6 +56,7 @@ $(window).load(function(){
             }
 
          }); 
+     }
 
     });
   </script>
