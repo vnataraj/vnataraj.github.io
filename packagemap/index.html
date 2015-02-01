@@ -14,11 +14,51 @@
 </form>
   </body>
   <script>
-    var client_id = 'd5370ef9';
-    var client_secret = 'e3ae08bfd6456b6d108d54c3d3121ae2';
+    var clientid = 'd5370ef9';
+    var clientsecret = 'e3ae08bfd6456b6d108d54c3d3121ae2';
     function sendToSlice(){
-      var url='https://api.slice.com/oauth/authorize?redirect_uri='+encodeURIComponent(window.location.href)+'&response_type=code&client_id='+client_id+'&approval_type=force';
+      var url='https://api.slice.com/oauth/authorize?redirect_uri='+encodeURIComponent(window.location.href)+'&response_type=code&client_id='+clientid+'&approval_type=force';
       window.location=url;
+    }
+  </script>
+  
+
+  <script>
+  function getUrlVars()
+      {
+         var vars = [], hash;
+         var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+         for(var i = 0; i < hashes.length; i++)
+               {
+                 hash = hashes[i].split('=');
+                 vars.push(hash[0]);
+                 vars[hash[0]] = hash[1];
+               }
+         return vars;
+      }
+
+    $(window).load(){
+     var auth_code = getUrlVars()["code"];
+     $.ajax({
+          url: 'https://api.slice.com/oauth/token',
+          type: 'POST',
+          data: { 
+            client_id: client_id, 
+            client_secret: clientsecret, 
+            grant_type: 'authorization_code', 
+            code: auth_code,
+            redirect_url: 'http://vnataraj.github.io/packagemap/'
+            },
+          success: function(data){
+            var access_token = jQuery.parseJSON(data)."access_token";
+            console.log("here is token : "+access_token);
+            }, error: function(data){
+            var error = jQuery.parseJSON(data)."error";
+            console.log(error);
+            }
+
+         }); 
+
     }
   </script>
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
