@@ -36,7 +36,7 @@
          return vars;
       }
 
-    $(window).load(){
+$(window).load(function(){
      var auth_code = getUrlVars()["code"];
      $.ajax({
           url: 'https://api.slice.com/oauth/token',
@@ -58,7 +58,7 @@
 
          }); 
 
-    }
+    });
   </script>
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 
