@@ -49,10 +49,10 @@ $(window).load(function(){
             redirect_url: 'http://vnataraj.github.io/packagemap/'
             },
           success: function(data){
-            var access_token = jQuery.parseJSON(data)."access_token";
+            var access_token = jQuery.parseJSON(data).access_token;
             console.log("here is token : "+access_token);
             }, error: function(data){
-            var error = jQuery.parseJSON(data)."error";
+            var error = jQuery.parseJSON(data).error;
             console.log(error);
             }
 
