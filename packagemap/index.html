@@ -41,13 +41,13 @@ $(window).load(function(){
      $.ajax({
           url: 'https://api.slice.com/oauth/token',
           type: 'POST',
-          data: JSON.stringify({ 
+          data: { 
             'client_id': clientid, 
             'client_secret': clientsecret, 
             'grant_type': 'authorization_code', 
             'code': auth_code,
             'redirect_url': 'http://vnataraj.github.io/packagemap/'
-          }),
+          },
           dataType: 'text',
           success: function(data){
             var access_token = jQuery.parseJSON(data).access_token;
