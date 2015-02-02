@@ -48,7 +48,6 @@ $(window).load(function(){
             'code': auth_code,
             'redirect_uri': 'http://vnataraj.github.io/packagemap/'
           },
-          dataType: 'text',
           success: function(data){
             var access_token = jQuery.parseJSON(data).access_token;
             console.log("here is token : "+access_token);
