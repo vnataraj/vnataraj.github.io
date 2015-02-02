@@ -42,16 +42,18 @@ $(window).load(function(){
           type: 'POST',
           contentType: 'application/json',
           data: { 
-            client_id: clientid, 
-            client_secret: clientsecret, 
-            grant_type: 'authorization_code', 
-            code: auth_code,
-            redirect_url: 'http://vnataraj.github.io/packagemap/'
-            },
+            'client_id': clientid, 
+            'client_secret': clientsecret, 
+            'grant_type': 'authorization_code', 
+            'code': auth_code,
+            'redirect_url': 'http://vnataraj.github.io/packagemap/'
+          },
+          dataType: 'text',
           success: function(data){
             var access_token = jQuery.parseJSON(data).access_token;
             console.log("here is token : "+access_token);
-            }, error: function(data){
+            }, 
+          error: function(data){
             var error = jQuery.parseJSON(data).error;
             console.log(error);
             }
