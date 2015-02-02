@@ -41,6 +41,7 @@ $(window).load(function(){
      $.ajax({
           url: 'https://api.slice.com/oauth/token',
           type: 'POST',
+          contentType: 'application/json',
           data: { 
             'client_id': clientid, 
             'client_secret': clientsecret, 
