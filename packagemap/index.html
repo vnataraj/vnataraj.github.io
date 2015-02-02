@@ -19,43 +19,9 @@
     var clientid = 'd5370ef9';
     var clientsecret = 'e3ae08bfd6456b6d108d54c3d3121ae2';
     function sendToSlice(){
-      //var url='https://api.slice.com/oauth/authorize?redirect_uri='+encodeURIComponent(window.location.href)+'&response_type=code&client_id='+clientid+'&approval_type=force';
-      //window.location=url;
-      $.ajax({
-        url: 'https://api.slice.com/oauth/authorize',
-        type: 'GET',
-        data: {
-          'redirect_uri': window.location.href,
-          'response_type': 'code',
-          'client_id': clientid ,
-          'approval_type': 'force'
-        }, success: function(data){
-            var auth_code = getUrlVars()["code"];
-            console.log("code is "+auth_code);
-            $.ajax({
-              url: 'https://api.slice.com/oauth/token',
-              type: 'POST',
-              data: { 
-                'client_id': clientid, 
-                'client_secret': clientsecret, 
-                'grant_type': 'authorization_code', 
-                'code': auth_code,
-                'redirect_uri': 'http://vnataraj.github.io/packagemap/'
-              },
-              success: function(data){
-                var access_token = jQuery.parseJSON(data).access_token;
-                console.log("here is token : "+access_token);
-                }, 
-              error: function(data){
-                var error = jQuery.parseJSON(data).error;
-                console.log(error);
-                }
-            }); 
-        }, error: function(data){
-            console.log(jQuery.parseJSON(data).error);
-        }
-      });
-    }
+      var url='https://api.slice.com/oauth/authorize?redirect_uri='+encodeURIComponent(window.location.href)+'&response_type=code&client_id='+clientid+'&approval_type=force';
+      window.location=url;
+  }
   function getUrlVars(){
          var vars = [], hash;
          var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
@@ -68,7 +34,7 @@
          return vars;
       }
 
-/*$(window).load(function(){
+$(window).load(function(){
      var auth_code = getUrlVars()["code"];
      console.log("code is"+auth_code);
      if(auth_code){
@@ -95,7 +61,6 @@
      }
 
     });
-    */
   </script>
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 
