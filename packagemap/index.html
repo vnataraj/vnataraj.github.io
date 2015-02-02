@@ -12,9 +12,10 @@
 
   <form action="javascript:sendToSlice()" accept-charset=UTF-8>
   <input type="submit">
-</form>
+  </form>
   </body>
   <script>
+// This is where the magic happens....
     var clientid = 'd5370ef9';
     var clientsecret = 'e3ae08bfd6456b6d108d54c3d3121ae2';
     function sendToSlice(){
@@ -40,13 +41,13 @@ $(window).load(function(){
      $.ajax({
           url: 'https://api.slice.com/oauth/token',
           type: 'POST',
-          data: { 
+          data: JSON.stringify({ 
             'client_id': clientid, 
             'client_secret': clientsecret, 
             'grant_type': 'authorization_code', 
             'code': auth_code,
             'redirect_url': 'http://vnataraj.github.io/packagemap/'
-          },
+          }),
           dataType: 'text',
           success: function(data){
             var access_token = jQuery.parseJSON(data).access_token;
