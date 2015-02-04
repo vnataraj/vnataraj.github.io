@@ -38,7 +38,7 @@ $(window).load(function(){
      var auth_code = getUrlVars()["code"];
      console.log("code is"+auth_code);
      if(auth_code){
-     $.ajax({
+     /*$.ajax({
           url: 'https://api.slice.com/oauth/token',
           type: 'POST',
           contentType: 'application/json',
@@ -58,7 +58,10 @@ $(window).load(function(){
             console.log(error);
             }
 
-         }); 
+         });
+        */
+      var url = 'https://api.slice.com/oauth/token?redirect_uri='+encodeURIComponent('http://vnataraj.github.io/packagemap')+'&grant_type=authorization_code&code='+auth_code+'&client_id='+clientid+'&clientsecret='+clientsecret;
+      window.location=url; 
      }
 
     });
