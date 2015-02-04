@@ -60,8 +60,40 @@ $(window).load(function(){
 
          });
         */
-      var url = 'https://api.slice.com/oauth/token?redirect_uri='+encodeURIComponent('http://vnataraj.github.io/packagemap')+'&grant_type=authorization_code&code='+auth_code+'&client_id='+clientid+'&clientsecret='+clientsecret;
+      /*var url = 'https://api.slice.com/oauth/token?redirect_uri='+encodeURIComponent('http://vnataraj.github.io/packagemap')+'&grant_type=authorization_code&code='+auth_code+'&client_id='+clientid+'&clientsecret='+clientsecret;
       window.location=url; 
+      */
+       var f = document.createElement('form');
+       f.setAttribute('method', 'post');
+       f.setAttribute('action', 'https://api.slice.com/oauth/token');
+       f.setAttribute('id', 'oauthform');
+       var i = document.createElement('input');
+       i.setAttribute('type', 'hidden');
+       i.setAttribute('name', 'client_id');
+       i.setAttribute('value', clientid);
+       var s = document.createElement('input');
+       s.setAttribute('type', 'hidden');
+       s.setAttribute('name', 'client_secret');
+       s.setAttribute('value', 'clientsecret');
+       var t = document.createElement('input');
+       t.setAttribute('type', 'hidden');
+       t.setAttribute('name', 'grant_type');
+       t.setAttribute('value', 'authorization_code');
+       var o = document.createElement('input');
+       o.setAttribute('type', 'hidden');
+       o.setAttribute('name', 'code');
+       o.setAttribute('value', auth_code);
+       var r = document.createElement('input');
+       r.setAttribute('type', 'hidden');
+       r.setAttribute('name', 'redirect_uri');
+       r.setAttribute('value', 'http://vnataraj.github.io/packagemap/');
+       f.appendChild(i);
+       f.appendChild(s);
+       f.appendChild(t);
+       f.appendChild(o);
+       f.appendChild(r);
+       document.getElementsByTagName('body')[0].appendChild(f);
+       document.forms['oauthform'].submit();
      }
 
     });
